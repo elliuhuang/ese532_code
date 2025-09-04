@@ -41,7 +41,7 @@ int main() {
     for(int i = 0; i < 2; i++) {
         printf("Row %d: ", i);
         for(int j = 0; j < 4; j++) {
-            printf("%d ", double_ptr[i][j]);  // Using double pointer to access elements
+            printf("%d ", double_ptr[i][j]); 
         }
         printf("\n");
     }
