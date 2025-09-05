@@ -43,25 +43,10 @@ int main() {
     printf("heap_array[2] address:      %p, value: %d\n", 
            (void*)&heap_array[2], heap_array[2]);
     
-    printf("\nADDRESS DIFFERENCES ANALYSIS:\n");
-    printf("Difference between consecutive stack pointers: %ld bytes\n", 
-           (char*)&ptr_to_x - (char*)&ptr_to_heap_array);
-    printf("Difference between consecutive heap array elements: %ld bytes\n", 
-           (char*)&heap_array[1] - (char*)&heap_array[0]);
-    
-//     printf("\nVERIFICATION:\n");
-//     // Compare variables declared in order to see stack growth within this frame
-//     printf("Stack variable order (by declaration): ptr_to_heap_single < ptr_to_heap_array < ptr_to_x < x\n");
-//     printf("Stack addresses show: variables declared later get higher addresses in this frame\n");
-//     printf("This is normal for stack frames - the stack grows downward between function calls,\n");
-//     printf("but within a frame, later variables may get higher addresses.\n");
-//     printf("Heap grows: %s\n", 
-//            (heap_single < heap_array) ? "upward (normal)" : "downward (unusual)");
-    
-    printf("\nPOINTER CHAIN VERIFICATION:\n");
-    printf("ptr_to_x -> x: %d (should be 20)\n", **(&ptr_to_x));
-    printf("ptr_to_heap_single -> heap: %d (should be 50)\n", **(&ptr_to_heap_single));
-    printf("ptr_to_heap_array -> heap[0]: %d (should be 5)\n", **(&ptr_to_heap_array));
+    printf("\nPOINTER CHAIN:\n");
+    printf("ptr_to_x -> x: %d \n", **(&ptr_to_x));
+    printf("ptr_to_heap_single -> heap: %d \n", **(&ptr_to_heap_single));
+    printf("ptr_to_heap_array -> heap[0]: %d\n", **(&ptr_to_heap_array));
     
     // Clean up heap memory
     free(heap_single);
