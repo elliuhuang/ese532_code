@@ -22,17 +22,8 @@ void temp(int i) {
 int main() {
     printf("=== ARRAY ADDRESSES ===\n\n");
     
-    // Call temp function multiple times to show stack behavior
-    printf("Calling temp() function 3 times to observe address patterns:\n\n");
     
     temp(0);
-    
-    // printf("=== OBSERVATIONS ===\n");
-    // printf("• Arrays 'a' and 'b' are on the STACK - addresses change between function calls\n");
-    // printf("• Arrays 'c' and 'd' are on the HEAP - addresses are typically increasing\n");
-    // printf("• Stack addresses are usually much higher than heap addresses\n");
-    // printf("• Stack variables (a, b, &c, &d) get reused in each function call\n");
-    // printf("• Heap allocations (c, d) get new addresses each time\n");
     
     return 0;
 }
