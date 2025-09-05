@@ -46,12 +46,5 @@ int main() {
         printf("\n");
     }
     
-    printf("\n=== VERIFICATION ===\n");
-    printf("Verifying all three methods give same results:\n");
-    printf("Element a[1][2] (should be 70):\n");
-    printf("  Using 2D array: a[1][2] = %d\n", a[1][2]);
-    printf("  Using array of pointers: ptr_array[1][2] = %d\n", ptr_array[1][2]);
-    printf("  Using double pointer: double_ptr[1][2] = %d\n", double_ptr[1][2]);
-    
     return 0;
 }
